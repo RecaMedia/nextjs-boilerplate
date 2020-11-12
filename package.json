@@ -1,0 +1,40 @@
+{
+  "name": "shop-my-menu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "Shannon Reca",
+  "license": "MIT",
+  "dependencies": {
+    "isomorphic-unfetch": "^3.1.0",
+    "js-cookie": "^2.2.1",
+    "next": "^10.0.1",
+    "nookies": "^2.5.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-js-pagination": "^3.0.3",
+    "react-transition-group": "^4.4.1",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "browserify": "^17.0.0",
+    "connect-history-api-fallback": "^1.6.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^4.1.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  }
+}

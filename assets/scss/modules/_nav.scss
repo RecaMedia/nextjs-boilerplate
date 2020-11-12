@@ -1,0 +1,224 @@
+header .nav__menu {
+  display: none;
+
+  &.nav__menu--open {
+    display: flex;
+  }
+}
+
+.footer {
+
+  &__copy {
+    justify-content: center;
+  }
+
+  .nav {
+    flex: 0 0 auto;
+  }
+
+  .nav__menu-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav__menu-item {
+    border-bottom: 0;
+  }
+}
+
+.nav {
+  flex: 1 1 auto;
+  position: relative;
+
+  .nav__button {
+    @include appearance(none);
+    align-items: center;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #cccccc;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    top: -30px;
+    transform: translateY(-50%);
+    width: 40px;
+
+    .icon {
+      color: #555555;
+      font-size: 2.8rem;
+    }
+
+    &:hover {
+      background-color: $gray;
+
+      .icon {
+        color: #ffffff;
+      }
+    }
+
+    .footer & {
+      display: none;
+    }
+  }
+
+  .nav__menu {
+    display: none;
+    flex-direction: column-reverse;
+    padding-bottom: 15px;
+
+    &--user {
+      background-color: $gray;
+    }
+  }
+
+  &__menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__menu-item {
+    align-items: center;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+
+    .nav__menu-link {
+      color: #555555;
+      flex: 1 1 100%;
+
+      &:hover {
+        background-color: rgba(255,255,255,0.2);
+        color: #000000;
+      }
+    }
+
+    .nav__menu-list {
+      flex: 1 1 100%;
+      width: 100%;
+
+      .nav__menu-item {
+        padding: 5px 0;
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__menu-link {
+    align-items: center;
+    background-color: transparent;
+    border-radius: 4px;
+    display: block;
+    display: flex;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: inherit;
+    height: 40px;
+    padding: 5px 15px;
+    text-decoration: none;
+    transition: background-color $menuSpeed, color $menuSpeed;
+    white-space: nowrap;
+    width: 100%;
+
+    &:hover {
+      background-color: $gray;
+      text-decoration: none;
+    }
+  }
+
+  @include not-mobile {
+    align-items: stretch;
+    display: flex;
+    flex: 0 1 auto;
+    padding: 0 10px;
+
+    .nav__button {
+      display: none;
+    }
+
+    .nav__menu {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      margin-right: 15px;
+      padding-bottom: 0;
+
+      &--user {
+        background-color: transparent;
+
+        .nav__menu-list {
+          background-color: $blue;
+        }
+      }
+    }
+
+    &__menu-list {
+      display: flex;
+      flex-direction: row;
+
+      .nav__menu-list {
+        background-color: $gray;
+        flex-direction: column;
+        height: 0;
+        min-width: 180px;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        z-index: 1;
+
+        .nav__menu-item {
+          padding: 0;
+        }
+
+        .nav__menu-link {
+          color: #ffffff;
+          padding: 10px 15px;
+          justify-content: flex-end;
+        }
+      }
+
+      .nav__menu-item--open & {
+        display: flex;
+        height: auto;
+      }
+    }
+
+    .nav__menu > .nav__menu-list > .nav__menu-item > .nav__menu-link {
+      height: 78px;
+    }
+
+    &__menu-item {
+      border-bottom: 0;
+      padding: 0;
+      position: relative;
+
+      .nav__menu-link {
+        border-radius: 0;
+        height: 5px 0;
+        position: relative;
+        right: 0;
+        z-index: 2;
+        width: auto;
+      }
+
+      .nav__menu-list .nav__menu-link {
+        height: 50px;
+      }
+
+      .nav__menu-item--open & {
+        padding: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+footer, .footer {
+  align-items: center;
+  background-color: $lightGray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: -15px -15px 0;
+
+  &__copy {
+    align-items: center;
+    background-color: transparent;
+    border-radius: 4px;
+    color: #555555;
+    display: inline-flex;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: inherit;
+    height: 60px;
+    padding: 0 15px;
+    text-decoration: none;
+    transition: background-color 250ms, color 250ms;
+    white-space: nowrap;
+  }
+
+  @include not-mobile {
+    flex-direction: row;
+    height: auto;
+    margin: 0 -30px;
+
+    &__copy {
+      height: 80px;
+    }
+  }
+}
